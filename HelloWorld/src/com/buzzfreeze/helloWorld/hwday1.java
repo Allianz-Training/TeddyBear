@@ -1,7 +1,5 @@
 package com.buzzfreeze.helloWorld;
 
-import java.util.Scanner;
-
 public class hwday1 {
 	public static void main(String[] args) {
 		int n = 4;

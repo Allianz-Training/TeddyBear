@@ -1,0 +1,8 @@
+Class = Banner
+Property
+-picture url
+-upload date
+-width
+-height
+Action
+-change picture(url)--> property url will change to newly updated picture
