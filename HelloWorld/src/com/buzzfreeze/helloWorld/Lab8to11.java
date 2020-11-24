@@ -1,6 +1,6 @@
 package com.buzzfreeze.helloWorld;
 
-public class HelloWorld {
+public class Lab8to11 {
 	public static void main(String[] args) {
 		lab8();
 		lab9();
