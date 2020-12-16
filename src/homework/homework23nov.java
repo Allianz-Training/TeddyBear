@@ -1,6 +1,8 @@
-package com.buzzfreeze.helloWorld;
+package homework;
 
-public class hwday1 {
+import java.util.Scanner;
+
+public class homework23nov {
 	public static void main(String[] args) {
 		int n = 4;
 
@@ -73,10 +75,23 @@ public class hwday1 {
 		lineSeperator("5.4");
 		draw21(n);
 
-//		lineSeperator("Keyboard");
-//		Scanner scan = new java.util.Scanner(System.in);
-//		System.out.print("Please enter number: ");
-//		keyboard(scan.nextInt());
+		lineSeperator("5.5");
+		draw22(n);
+		
+		lineSeperator("5.6");
+		draw23(n);
+		
+		lineSeperator("5.7");
+		draw24(n);
+		
+		lineSeperator("5.8");
+		draw25(n);
+		
+		
+		lineSeperator("Keyboard");
+		Scanner scan = new java.util.Scanner(System.in);
+		System.out.print("Please enter number: ");
+		keyboard(scan.nextInt());
 	}
 
 	public static void draw1(int n) {
@@ -182,7 +197,7 @@ public class hwday1 {
 		for (int i = 1; i <= n; i++) {
 			for (int j = 1; j <= n; j++) {
 				if (i == j) {
-					System.out.print("_");
+					System.out.print("-");
 				} else {
 					System.out.print("*");
 				}
@@ -195,7 +210,7 @@ public class hwday1 {
 		for (int i = 1; i <= n; i++) {
 			for (int j = 1; j <= n; j++) {
 				if (j == n - (i - 1)) {
-					System.out.print("_");
+					System.out.print("-");
 				} else {
 					System.out.print("*");
 				}
@@ -208,7 +223,7 @@ public class hwday1 {
 		for (int i = 1; i <= n; i++) {
 			for (int j = 1; j <= n; j++) {
 				if (j > i) {
-					System.out.print("_");
+					System.out.print("-");
 				} else {
 					System.out.print("*");
 				}
@@ -221,7 +236,7 @@ public class hwday1 {
 		for (int i = 1; i <= n; i++) {
 			for (int j = 1; j <= n; j++) {
 				if (j > n - i + 1) {
-					System.out.print("_");
+					System.out.print("-");
 				} else {
 					System.out.print("*");
 				}
@@ -233,7 +248,7 @@ public class hwday1 {
 	public static void draw16(int n) {
 		boolean isN = false;
 		for (int i = 1; i != 0;) {
-			System.out.println("*".repeat(i) + "_".repeat(n - i));
+			System.out.println("*".repeat(i) + "-".repeat(n - i));
 			if (i == n) {
 				isN = true;
 			}
@@ -248,7 +263,7 @@ public class hwday1 {
 	public static void draw17(int n) {
 		boolean isN = false;
 		for (int i = 1; i != 0;) {
-			System.out.println(String.valueOf(i).repeat(i) + "_".repeat(n - i));
+			System.out.println(String.valueOf(i).repeat(i) + "-".repeat(n - i));
 			if (i == n) {
 				isN = true;
 			}
@@ -270,7 +285,7 @@ public class hwday1 {
 		for (int i = 1; i <= n; i++) {
 			for (int j = 1; j <= n; j++) {
 				if (j <= n - i) {
-					System.out.print("_");
+					System.out.print("-");
 				} else {
 					System.out.print("*");
 				}
@@ -285,7 +300,7 @@ public class hwday1 {
 				if (j > i - 1) {
 					System.out.print("*");
 				} else {
-					System.out.print("_");
+					System.out.print("-");
 				}
 			}
 			System.out.println();
@@ -295,7 +310,7 @@ public class hwday1 {
 	public static void draw20(int n) {
 		boolean isN = false;
 		for (int i = 1; i != 0;) {
-			System.out.println("_".repeat(n - i) + "*".repeat(i));
+			System.out.println("-".repeat(n - i) + "*".repeat(i));
 			if (i == n) {
 				isN = true;
 			}
@@ -311,7 +326,7 @@ public class hwday1 {
 		boolean isN = false;
 		int i = 1;
 		for (int j = 1; j != 0;) {
-			System.out.print("_".repeat(n - j));
+			System.out.print("-".repeat(n - j));
 			for (int k = 1; k <= j; k++) {
 				System.out.print(i);
 				i++;
@@ -328,6 +343,72 @@ public class hwday1 {
 		}
 
 	}
+
+	public static void draw22(int n) {
+		for (int i = 1; i <= n; i++) {
+			System.out.print("-".repeat(n - i));
+			System.out.print("*".repeat(i * 2 - 1));
+			System.out.print("-".repeat(n - i));
+			System.out.println();
+		}
+	}
+	
+	public static void draw23(int n) {
+		for (int i = 1; i <= n; i++) {
+			System.out.print("-".repeat(i-1));
+			System.out.print("*".repeat((n*2)-1-((i-1)*2)));
+			System.out.print("-".repeat(i-1));
+			System.out.println();
+		}
+	}
+	
+	public static void draw24(int n) {
+		boolean isN = false;
+		for(int i = 1 ; i != 0;) {
+			printLine(n-i);
+			System.out.print("*".repeat((2*i)-1));
+			printLine(n-i);
+			if (i == n) {
+				isN = true;
+			}
+			
+			if (isN) {
+				i--;
+			} else {
+				i++;
+			}
+			System.out.println();
+		}
+	}
+	
+	public static void draw25(int n) {
+		boolean isN = false;
+		int count = 1;
+		for(int i = 1 ; i != 0;) {
+			printLine(n-i);
+			for(int j = 1 ; j <= (2*i)-1; j++) {
+				System.out.print(count);
+				count++;
+			}
+			printLine(n-i);
+			if (i == n) {
+				isN = true;
+			}
+			
+			if (isN) {
+				i--;
+			} else {
+				i++;
+			}
+			System.out.println();
+		}
+	}
+	
+	public static void printLine(int i) {
+		System.out.print("-".repeat(i));
+	}
+	
+	
 
 	public static void lineSeperator(String q) {
 		System.out.println();
