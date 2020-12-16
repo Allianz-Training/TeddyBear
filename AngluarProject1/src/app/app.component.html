@@ -1,6 +1,19 @@
 <div>
-  <h2>Product List</h2>
-  <app-product-list #productList></app-product-list>
+  <ul>
+    <li>
+      <a [routerLink]="['/']">Home</a>
+    </li>
+    <li>
+      <a [routerLink]="['/login']">Login</a>
+    </li>
+    <li>
+      <a [routerLink]="['/products']">Products</a>
+    </li>
+  </ul>
 </div>
-<div><app-main-content></app-main-content></div>
-<div><app-navbar></app-navbar></div>
+
+<div class="container">
+  <router-outlet> blah</router-outlet>
+</div>
+
+<div>.. This is a GODDAMN footer ..</div>
